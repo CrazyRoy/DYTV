@@ -13,20 +13,18 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 添加子控制器
         addChildVc("Home")
         addChildVc("Live")
         addChildVc("Fellow")
         addChildVc("Profile")
-        print("\(childViewControllers.count)")
     }
     
-    func addChildVc(sbName: String) {
+    
+    private func addChildVc(storyName : String) {
+        // 1.通过storyboard获取控制器
+        let childVc = UIStoryboard(name: storyName, bundle: nil).instantiateInitialViewController()
         
-        // 1. 通过storyboard加载子控制器
-        let sbVc = UIStoryboard(name: sbName, bundle: nil).instantiateInitialViewController()!
-        
-        // 2. 将sbVc添加为子控制器
-        addChildViewController(sbVc)
+        // 2.将childVc作为子控制器
+        addChildViewController(childVc!)
     }
 }

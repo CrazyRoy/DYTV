@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
 // MARK:- 设置UI界面
 extension HomeViewController {
     private func setupUI() {
+        
         // 0.不需要调整UIScrollView的内边距
         automaticallyAdjustsScrollViewInsets = false
         
