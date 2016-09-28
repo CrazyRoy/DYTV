@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085E49AA1D9B91B20083E4F5 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E49A91D9B91B20083E4F5 /* PageTitleView.swift */; };
+		085E49AC1D9B9BD40083E4F5 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E49AB1D9B9BD40083E4F5 /* PageContentView.swift */; };
 		088463F61D8BC2AD0099EABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088463F51D8BC2AD0099EABB /* AppDelegate.swift */; };
 		088464001D8BC2AD0099EABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088463FE1D8BC2AD0099EABB /* LaunchScreen.storyboard */; };
 		088464081D8BC59A0099EABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088464071D8BC59A0099EABB /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085E49A91D9B91B20083E4F5 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		085E49AB1D9B9BD40083E4F5 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		088463F21D8BC2AD0099EABB /* DYTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088463F51D8BC2AD0099EABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		088463FF1D8BC2AD0099EABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -200,9 +204,9 @@
 		0884641D1D8BC8B40099EABB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0884641E1D8BC8B40099EABB /* Controller */,
 				0884641F1D8BC8B40099EABB /* Model */,
 				088464201D8BC8B40099EABB /* View */,
+				0884641E1D8BC8B40099EABB /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -226,6 +230,8 @@
 		088464201D8BC8B40099EABB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				085E49A91D9B91B20083E4F5 /* PageTitleView.swift */,
+				085E49AB1D9B9BD40083E4F5 /* PageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +365,8 @@
 			files = (
 				088463F61D8BC2AD0099EABB /* AppDelegate.swift in Sources */,
 				08E4E8CC1D8BD7A2001798C4 /* UIBarButtonItem+Extension.swift in Sources */,
+				085E49AC1D9B9BD40083E4F5 /* PageContentView.swift in Sources */,
+				085E49AA1D9B91B20083E4F5 /* PageTitleView.swift in Sources */,
 				08E4E8B51D8BCC85001798C4 /* MainViewController.swift in Sources */,
 				08E4E8CE1D8BDA20001798C4 /* HomeViewController.swift in Sources */,
 				08E4E8D81D8BDE3D001798C4 /* ProfileViewController.swift in Sources */,

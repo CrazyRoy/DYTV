@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIBarButtonItem {
+    // 便利构造函数
     convenience init(imageName: String, highImageName: String, size: CGSize = CGSizeZero) {
         
         // 1.创建UIButton

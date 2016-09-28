@@ -9,6 +9,13 @@
 import UIKit
 
 class MainViewController: UITabBarController {
+    
+    override class func initialize() {
+        
+        let navBarAppear = UINavigationBar.appearance()
+        navBarAppear.barTintColor = UIColor.orangeColor()
+//        navBarAppear.tintColor = UIColor.whiteColor() 
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
