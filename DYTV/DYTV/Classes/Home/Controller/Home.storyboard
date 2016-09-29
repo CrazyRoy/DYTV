@@ -21,15 +21,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKY-uN-ftb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336" y="55"/>
+            <point key="canvasLocation" x="-336" y="54.999999999999993"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="OtN-OI-Atl">
             <objects>
                 <viewController id="Fyg-PA-7Fb" customClass="HomeViewController" customModule="DYTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2tF-WS-GPc"/>
-                        <viewControllerLayoutGuide type="bottom" id="Y8p-ft-BQe"/>
+                        <viewControllerLayoutGuide type="top" id="ab5-sF-EFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="WOF-Kt-1yJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="u3z-l5-8Um">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A07-Gt-4pU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="55"/>
+            <point key="canvasLocation" x="391" y="54.999999999999993"/>
         </scene>
     </scenes>
     <resources>

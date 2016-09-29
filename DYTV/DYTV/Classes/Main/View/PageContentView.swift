@@ -80,7 +80,7 @@ extension PageContentView {
 extension PageContentView: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         print(self.childVcs.count)
+        
          return self.childVcs.count
     }
     
@@ -95,6 +95,7 @@ extension PageContentView: UICollectionViewDataSource {
         }
         
         let childVc = childVcs[indexPath.item]
+        childVc.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVc.view)
         
         return cell
