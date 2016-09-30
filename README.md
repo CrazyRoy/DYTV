@@ -3,10 +3,8 @@
   - Continues updating
   
 ## Current progress Preview
-  
-  ![image](https://github.com/coderLL/DYTV/blob/master/1-1.png)
-  
-  ![image](https://github.com/coderLL/DYTV/blob/master/1-2.png)
+
+  <img src="https://github.com/coderLL/DYTV/blob/master/1-1.png" width="100" height="40" alt="图片1-1" />
   
 ## 后期持续更新...
 
