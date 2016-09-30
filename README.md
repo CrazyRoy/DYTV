@@ -1,6 +1,6 @@
 # 高仿 | 斗鱼TV
   - An project of DouYuTV
-   - Continues updating
+  - Continues updating
   
 ## Current progress Preview
   
