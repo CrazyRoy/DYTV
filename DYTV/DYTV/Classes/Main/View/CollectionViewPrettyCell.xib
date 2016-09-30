@@ -8,14 +8,77 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewPrettyCell" customModule="DYTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="212" height="108"/>
+            <rect key="frame" x="0.0" y="0.0" width="203" height="202"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="212" height="108"/>
+                <rect key="frame" x="0.0" y="0.0" width="203" height="202"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUS-Vj-cXU">
+                        <rect key="frame" x="5" y="178" width="45" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Fia-1u-QA9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="重庆市" image="ico_location">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值直播中..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-Ge-KXd">
+                        <rect key="frame" x="5" y="157" width="188" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="f8n-WK-k9c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-e7-ENV">
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="152"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCV-dy-BaW">
+                        <rect key="frame" x="138" y="5" width="60" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="rOR-8J-cPw"/>
+                            <constraint firstAttribute="width" constant="60" id="rXb-h9-mtg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <size key="customSize" width="212" height="108"/>
-            <point key="canvasLocation" x="227" y="371"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vBT-e7-ENV" secondAttribute="trailing" id="Bko-QQ-XpB"/>
+                <constraint firstItem="vBT-e7-ENV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HKI-6r-oCd"/>
+                <constraint firstItem="fcP-Ge-KXd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="UWf-Sl-q8g"/>
+                <constraint firstAttribute="bottom" secondItem="EUS-Vj-cXU" secondAttribute="bottom" constant="10" id="Wci-Gr-NYT"/>
+                <constraint firstAttribute="trailing" secondItem="aCV-dy-BaW" secondAttribute="trailing" constant="5" id="cne-P9-SXg"/>
+                <constraint firstItem="EUS-Vj-cXU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="dhW-4P-szu"/>
+                <constraint firstItem="aCV-dy-BaW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="e2z-kZ-QHm"/>
+                <constraint firstItem="vBT-e7-ENV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hI4-hX-7MZ"/>
+                <constraint firstItem="fcP-Ge-KXd" firstAttribute="top" secondItem="vBT-e7-ENV" secondAttribute="bottom" constant="5" id="iwf-LI-5EX"/>
+                <constraint firstAttribute="trailing" secondItem="fcP-Ge-KXd" secondAttribute="trailing" constant="10" id="y4g-Tl-yQX"/>
+                <constraint firstItem="EUS-Vj-cXU" firstAttribute="top" secondItem="fcP-Ge-KXd" secondAttribute="bottom" constant="5" id="y60-l1-ytP"/>
+            </constraints>
+            <size key="customSize" width="203" height="202"/>
+            <point key="canvasLocation" x="257.5" y="382"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
 </document>
