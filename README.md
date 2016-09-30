@@ -3,7 +3,9 @@
   - Continues updating
   
 ## Current progress Preview
-  <img src="https://github.com/coderLL/DYTV/blob/master/1-1.png" width="320" height="568" alt="图片1-1" />   <img src="https://github.com/coderLL/DYTV/blob/master/1-2.png" width="320" height="568" alt="图片1-2" />
+   > 进度截图
+   
+  <img src="https://github.com/coderLL/DYTV/blob/master/photos/1-1.png" width="200" height="350" alt="图片1-1" /><img src="https://github.com/coderLL/DYTV/blob/master/photos/1-2.png" width="200" height="350" alt="图片1-2" /><img src="https://github.com/coderLL/DYTV/blob/master/photos/1-3.png" width="200" height="350" alt="图片1-3" />
   
 ## 后期持续更新...
 
