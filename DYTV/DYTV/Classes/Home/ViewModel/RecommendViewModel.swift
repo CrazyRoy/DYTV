@@ -9,8 +9,10 @@
 import UIKit
 
 class RecommendViewModel {
+    
     // MARK:- 懒加载属性
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
     private lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     private lazy var prettyGroup : AnchorGroup = AnchorGroup()
 }
@@ -100,6 +102,25 @@ extension RecommendViewModel {
             self.anchorGroups.insert(self.prettyGroup, atIndex: 0)
             self.anchorGroups.insert(self.bigDataGroup, atIndex: 0)
             
+            finishCallback()
+        }
+    }
+    
+    // 请求无限轮播数据
+    func requestCycleData(finishCallback : () -> ()) {
+        NetworkTools.requestData(.GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            // 1.获取整体字典数据
+            guard let resultDict = result as? [String : NSObject] else { return }
+            
+            // 2.根据data的key, 获取数据
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
+            
+            // 3.字典转模型对象
+            for dict in dataArray {
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
+            
+            // 回调闭包
             finishCallback()
         }
     }

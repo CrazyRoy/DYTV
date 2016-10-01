@@ -14,6 +14,8 @@ private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 
 private let kNormalCellID = "kNormalCellID"
 private let kHeaderViewID = "kHeaderViewID"
@@ -44,6 +46,16 @@ class RecommendViewController: UIViewController {
         
         return collectionView
     }()
+    private lazy var recommendCycleView : RecommendCycleView = {
+       let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
+    private lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
     
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -60,7 +72,17 @@ class RecommendViewController: UIViewController {
 // MARK:- 设置UI界面内容
 extension RecommendViewController {
     private func setupUI() {
-        self.view.addSubview(collectionView)
+        // 1.将UICollectionView添加到控制器的View中
+        view.addSubview(collectionView)
+        
+        // 2.将cycleView添加到UICollectionView中
+        collectionView.addSubview(recommendCycleView)
+        
+        // 3.将gameView添加到UICollectionView中
+        collectionView.addSubview(gameView)
+        
+        // 4.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -72,8 +94,13 @@ extension RecommendViewController {
             // 1.展示推荐数据
             self.collectionView.reloadData()
             
-//            // 2.将数据传递给GameView
-//            self.gameView.groups = self.recommendVM.anchorGroups
+            // 2.将数据传递给gameView
+            self.gameView.groups = self.recommendVm.anchorGroups
+        }
+        
+        // 2.请求无线轮播数据
+        recommendVm.requestCycleData { 
+            self.recommendCycleView.cycleModels = self.recommendVm.cycleModels
         }
     }
 }

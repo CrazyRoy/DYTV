@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendCycleView" customModule="DYTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-9q-eQr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bsD-jM-W1Q">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="mQf-tS-X2d"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="abo-gX-xJ9"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V8x-Wa-jvU">
+                    <rect key="frame" x="326" y="117" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="0.71372549019999998" green="0.4549019608" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="V8x-Wa-jvU" secondAttribute="trailing" constant="10" id="8FA-db-P4Q"/>
+                <constraint firstAttribute="bottom" secondItem="HAa-9q-eQr" secondAttribute="bottom" id="AjF-33-aOS"/>
+                <constraint firstItem="HAa-9q-eQr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ci7-Ep-5bQ"/>
+                <constraint firstAttribute="trailing" secondItem="HAa-9q-eQr" secondAttribute="trailing" id="Jc0-PN-dV5"/>
+                <constraint firstAttribute="bottom" secondItem="V8x-Wa-jvU" secondAttribute="bottom" constant="-4" id="iUZ-lc-L4L"/>
+                <constraint firstItem="HAa-9q-eQr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yDH-u0-mSg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="HAa-9q-eQr" id="dkC-kF-yfX"/>
+                <outlet property="pageControl" destination="V8x-Wa-jvU" id="2ZI-Q8-xSP"/>
+            </connections>
+            <point key="canvasLocation" x="147.5" y="327"/>
+        </view>
+    </objects>
+</document>
