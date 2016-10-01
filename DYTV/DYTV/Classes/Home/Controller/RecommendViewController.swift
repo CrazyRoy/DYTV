@@ -90,15 +90,22 @@ extension RecommendViewController : UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        // 1.定义Cell
-        let cell : UICollectionViewCell
+        // 1.取出模型对象
+        let group = recommendVm.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
         
-        // 2.取出Cell
+        // 2.定义Cell
+        let cell : CollectionBaseCell!
+        
+        // 3.取出Cell
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(kPrettyCellID, forIndexPath: indexPath)
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier(kPrettyCellID, forIndexPath: indexPath) as! CollectionViewPrettyCell
         }else {
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(kNormalCellID, forIndexPath: indexPath)
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier(kNormalCellID, forIndexPath: indexPath) as! CollectionViewNormalCell
         }
+        
+        // 4.将模型赋值给cell
+        cell.anchor = anchor
         
         return cell
     }

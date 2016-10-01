@@ -65,6 +65,12 @@
                 <constraint firstAttribute="trailing" secondItem="7N2-nD-GFk" secondAttribute="trailing" id="rPs-qX-rHb"/>
             </constraints>
             <size key="customSize" width="233" height="147"/>
+            <connections>
+                <outlet property="iconImageView" destination="7N2-nD-GFk" id="d2B-bR-PYt"/>
+                <outlet property="nickNameLabel" destination="Uc2-3z-5zt" id="eu6-HH-BkJ"/>
+                <outlet property="onlineBtn" destination="hcS-pU-gj6" id="3TI-1c-mpD"/>
+                <outlet property="roomNameLabel" destination="ae5-bg-eUs" id="qEX-3X-G7n"/>
+            </connections>
             <point key="canvasLocation" x="181.5" y="370.5"/>
         </collectionViewCell>
     </objects>
