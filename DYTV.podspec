@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DYTV"
-  s.version      = "1.0.0"
+  s.version      = "1.00"
   s.summary      = "A application for DYTV of ios."
 
   s.homepage     = "https://github.com/coderLL/DYTV"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/coderLL/DYTV.git", :tag => s.version }
 
-  s.source_files  = "DYTV/*"
+  s.source_files  = "DYTV/DYTV/*"
     
   s.requires_arc = true
 
