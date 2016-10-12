@@ -95,7 +95,17 @@ extension RecommendViewController {
             self.collectionView.reloadData()
             
             // 2.将数据传递给gameView
-            self.gameView.groups = self.recommendVm.anchorGroups
+            var groups = self.recommendVm.anchorGroups
+            // 2.1.移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            
+            // 2.2添加更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            
+            self.gameView.groups = groups
         }
         
         // 2.请求无线轮播数据
