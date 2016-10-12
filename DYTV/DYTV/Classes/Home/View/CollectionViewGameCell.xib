@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewGameCell" customModule="DYTV" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewGameCell" customModule="DYTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-W1-6hn">
-                        <rect key="frame" x="17" y="15" width="45.5" height="45.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="PJs-W1-6hn" secondAttribute="height" multiplier="1:1" id="F80-5C-ve1"/>
+                            <constraint firstAttribute="height" constant="45" id="4R9-KI-ieS"/>
+                            <constraint firstAttribute="width" constant="45" id="fAl-Rn-Yng"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -27,30 +27,33 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q48-Ww-QNs">
-                        <rect key="frame" x="16" y="65.5" width="48" height="14.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14.5" id="zyQ-bn-9zc"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-kj-PlP">
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LbT-cz-INB"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="PJs-W1-6hn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Byx-42-Vze"/>
-                <constraint firstItem="q48-Ww-QNs" firstAttribute="top" secondItem="PJs-W1-6hn" secondAttribute="bottom" constant="5" id="EnI-KA-1Sh"/>
-                <constraint firstAttribute="bottom" secondItem="q48-Ww-QNs" secondAttribute="bottom" constant="10" id="IbB-Vx-2q6"/>
-                <constraint firstItem="q48-Ww-QNs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eTu-Ds-SZC"/>
-                <constraint firstItem="PJs-W1-6hn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="gO5-24-R4b"/>
+                <constraint firstAttribute="trailing" secondItem="GtF-kj-PlP" secondAttribute="trailing" id="3Xh-n0-Uqg"/>
+                <constraint firstItem="PJs-W1-6hn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="CbO-9h-ltQ"/>
+                <constraint firstItem="q48-Ww-QNs" firstAttribute="top" secondItem="PJs-W1-6hn" secondAttribute="bottom" constant="8" id="PgI-hC-69u"/>
+                <constraint firstAttribute="bottom" secondItem="GtF-kj-PlP" secondAttribute="bottom" constant="-1" id="RK4-Wu-dyQ"/>
+                <constraint firstItem="PJs-W1-6hn" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="fW0-9k-hBk"/>
+                <constraint firstItem="GtF-kj-PlP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pAI-nC-ssA"/>
+                <constraint firstItem="q48-Ww-QNs" firstAttribute="centerX" secondItem="PJs-W1-6hn" secondAttribute="centerX" id="tLc-QB-5dE"/>
             </constraints>
             <size key="customSize" width="196" height="74"/>
             <connections>
                 <outlet property="iconImageView" destination="PJs-W1-6hn" id="iYe-7S-UaR"/>
                 <outlet property="titleLabel" destination="q48-Ww-QNs" id="gFF-3n-72O"/>
             </connections>
-            <point key="canvasLocation" x="162" y="354"/>
+            <point key="canvasLocation" x="15" y="311"/>
         </collectionViewCell>
     </objects>
 </document>
