@@ -49,6 +49,7 @@
 		08E4E8DE1D8BE020001798C4 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4E8DD1D8BE020001798C4 /* LiveViewController.swift */; };
 		5D8E8F5830564CCD8CA40D23 /* Pods_DYTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEFECFF0B69A61946540205 /* Pods_DYTV.framework */; };
 		6B60A2C51DB120FD006517EA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60A2C41DB120FD006517EA /* BaseViewModel.swift */; };
+		6B60A2C71DB13B11006517EA /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B60A2C61DB13B11006517EA /* BaseAnchorViewController.swift */; };
 		6B7BAD931DAF88DF00A9054C /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BAD921DAF88DF00A9054C /* AmuseViewController.swift */; };
 		6B7BAD991DAF8B2E00A9054C /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BAD981DAF8B2E00A9054C /* AmuseViewModel.swift */; };
 		6BBF99771DADECA4003C5C0A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBF99761DADECA4003C5C0A /* GameViewController.swift */; };
@@ -101,6 +102,7 @@
 		08E4E8D91D8BDE5E001798C4 /* FellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FellowViewController.swift; sourceTree = "<group>"; };
 		08E4E8DD1D8BE020001798C4 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		6B60A2C41DB120FD006517EA /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		6B60A2C61DB13B11006517EA /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		6B7BAD921DAF88DF00A9054C /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		6B7BAD981DAF8B2E00A9054C /* AmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		6BBF99761DADECA4003C5C0A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				08E4E8C81D8BD47C001798C4 /* Main.storyboard */,
 				08E4E8B41D8BCC85001798C4 /* MainViewController.swift */,
+				6B60A2C61DB13B11006517EA /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				08E4E8D81D8BDE3D001798C4 /* ProfileViewController.swift in Sources */,
 				6B7BAD991DAF8B2E00A9054C /* AmuseViewModel.swift in Sources */,
 				6B60A2C51DB120FD006517EA /* BaseViewModel.swift in Sources */,
+				6B60A2C71DB13B11006517EA /* BaseAnchorViewController.swift in Sources */,
 				08411CF91DA0210A00F64ADF /* CollectionViewCycleCell.swift in Sources */,
 				08E4E8DA1D8BDE5E001798C4 /* FellowViewController.swift in Sources */,
 				08E4E8D61D8BDDB8001798C4 /* Common.swift in Sources */,

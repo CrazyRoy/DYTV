@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecommendViewModel : BaseViewModel{
+class RecommendViewModel : BaseViewModel {
     
     // MARK:- 懒加载属性
     lazy var cycleModels : [CycleModel] = [CycleModel]()
@@ -34,7 +34,7 @@ extension RecommendViewModel {
             guard let resultDict = result as? [String : NSObject] else { return }
             
             // 2.根据data该key, 获取数据
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]]else {return}
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {return}
             
             // 3.遍历字典,并且转成模型数组
             // 3.1设置组的属性
