@@ -83,17 +83,17 @@ extension AmuseViewController : UICollectionViewDataSource, UICollectionViewDele
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-       return self.amuseVM.anchors.count
+       return self.amuseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let group = self.amuseVM.anchors[section]
+        let group = self.amuseVM.anchorGroups[section]
         return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 1.取出模型对象
-        let group = self.amuseVM.anchors[(indexPath as NSIndexPath).section]
+        let group = self.amuseVM.anchorGroups[(indexPath as NSIndexPath).section]
         let anchor = group.anchors[(indexPath as NSIndexPath).item]
         
         // 2.取出Cell
@@ -111,7 +111,7 @@ extension AmuseViewController : UICollectionViewDataSource, UICollectionViewDele
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         
         // 2.取出模型赋值
-        let group = self.amuseVM.anchors[(indexPath as NSIndexPath).section]
+        let group = self.amuseVM.anchorGroups[(indexPath as NSIndexPath).section]
         headerView.group = group
         
         return headerView
