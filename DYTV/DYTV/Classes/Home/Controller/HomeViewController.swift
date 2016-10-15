@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK:- 常量定义
 private let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
