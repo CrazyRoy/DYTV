@@ -38,8 +38,11 @@ extension FunnyViewController {
         self.baseVM = amuseVM
         
         self.amuseVM.loadFunnyData(method: .get, URLString: "http://capi.douyucdn.cn/api/v1/getColumnRoom/3") {
-            // 刷新表格数据
+            // 2.1刷新表格数据
             self.collectionView.reloadData()
+            
+            // 2.2数据请求完成
+            self.loadDataFinished()
         }
     }
 }

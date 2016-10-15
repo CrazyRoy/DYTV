@@ -43,12 +43,16 @@ extension AmuseViewController {
         self.baseVM = self.amuseVM
         
         self.amuseVM.loadAmuseData {
-            // 刷新表格数据
+            // 1.刷新表格数据
             self.collectionView.reloadData()
-            // 给菜单栏传递显示数据
+            
+            // 2.给菜单栏传递显示数据
             var tempGroups = self.amuseVM.anchorGroups
             tempGroups.removeFirst()
             self.menuView.groups = tempGroups
+            
+            // 3.数据请求完成
+            self.loadDataFinished()
         }
     }
 }
