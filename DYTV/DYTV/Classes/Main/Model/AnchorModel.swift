@@ -25,7 +25,7 @@ class AnchorModel: NSObject {
     // 主播所在城市
     var anchor_city : String = ""
     
-    init(dict : [String : NSObject]) {
+    init(dict : [String : Any]) {
         super.init()
         
         setValuesForKeys(dict)

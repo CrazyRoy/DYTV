@@ -63,6 +63,7 @@ extension BaseAnchorViewController {
     }
 }
 
+
 // MARK:- 请求数据
 extension BaseAnchorViewController {
     func loadData() {
@@ -73,22 +74,23 @@ extension BaseAnchorViewController {
 extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
+    
         return self.baseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         let group = self.baseVM.anchorGroups[section]
         return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // 1.取出模型对象
-        let group = self.baseVM.anchorGroups[(indexPath as NSIndexPath).section]
-        let anchor = group.anchors[(indexPath as NSIndexPath).item]
         
-        // 2.取出Cell
+        // 1.取出Cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionViewNormalCell
+        
+        // 2.取出模型对象
+        let anchor = self.baseVM.anchorGroups[(indexPath as NSIndexPath).section].anchors[(indexPath as NSIndexPath).item]
         
         // 4.将模型赋值给cell
         cell.anchor = anchor
