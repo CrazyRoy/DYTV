@@ -128,22 +128,28 @@ extension BaseAnchorViewController : UICollectionViewDelegate {
         let anchor = self.baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
         // 2.判断是主播房间还是秀场房间
-        anchor.isVertical == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+        anchor.isVertical == 0 ? pushNormalRoomVc(anchor) : presentShowRoomVc(anchor)
     }
     
-    func pushNormalRoomVc() {
+    func pushNormalRoomVc(_ anchor : AnchorModel) {
         // 1.创建normalRoomVc
         let normalRoomVc = RoomNormalViewController()
         
-        // 2.以modal方式弹出
+        // 2.传递数据模型
+        normalRoomVc.anchor = anchor
+        
+        // 3.以push方式推出
         navigationController?.pushViewController(normalRoomVc, animated: true)
     }
     
-    func presentShowRoomVc() {
+    func presentShowRoomVc(_ anchor : AnchorModel) {
         // 1.创建ShowRoomVc
         let showRoomVc = RoomShowViewController()
         
-        // 2.以modal方式弹出
+        // 2.传递数据模型
+        showRoomVc.anchor = anchor
+        
+        // 3.以modal方式弹出
         present(showRoomVc, animated: true, completion: nil)
     }
 }
